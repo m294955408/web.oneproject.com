@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { UserAuthService } from './user/services/user-auth.service';
 
 import {appRoutes} from './app.routes';
 
@@ -20,7 +21,7 @@ import {appRoutes} from './app.routes';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    
+    UserAuthService
   ],
   bootstrap: [AppComponent]
 })
