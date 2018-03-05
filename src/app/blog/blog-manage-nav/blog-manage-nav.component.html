@@ -1,0 +1,14 @@
+<h1 style="margin-top: 0px; margin-bottom: 0px; line-height: 14px; font-size: 14px;">
+
+    <ul>
+        <li [ngClass]="{'active' : type == 'article'}"><a href="./blog/manage">文章管理</a></li>
+        <li [ngClass]="{'active' : type == 'category'}"><a href="./blog/category">类别管理</a></li>
+        <li [ngClass]="{'active' : type == 'feedback'}"><a href="./blog/feedback">评论管理</a></li>
+        <li [ngClass]="{'active' : type == 'draft'}"><a href="./blog/draft">草稿箱</a></li>
+        <li [ngClass]="{'active' : type == 'deleted'}"><a href="./blog/deleted">回收站</a></li>
+    </ul>
+    <a class="pull-right" style="font-size: 12px;" href="./blog/write">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        写文章
+    </a>
+</h1>

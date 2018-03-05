@@ -17,6 +17,9 @@ export class AppComponent {
 
   public currentUser: User;
 
+  // 是否显示左侧菜单
+  public isShowLeftMenu: boolean;
+
   constructor(public router: Router,
     public activatedRoute: ActivatedRoute,
     public titleService: Title,
@@ -34,6 +37,8 @@ export class AppComponent {
       .filter(route => route.outlet === 'primary')
       .mergeMap(route => route.data)
       .subscribe((event) => this.titleService.setTitle(event['title']));
+
+    this.isShowLeftMenu = false;
 
     console.log(this.currentUser);
 

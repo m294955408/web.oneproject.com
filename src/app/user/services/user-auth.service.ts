@@ -58,6 +58,8 @@ export class UserAuthService {
                 .map((response: Response) => response.json())
                 .subscribe(
                     data => {
+                        console.log("isLogin:");
+                        console.log(data);
                         if(data.isSuccess) {
                             this.loginFlag.next(true);
                         }

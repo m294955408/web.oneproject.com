@@ -54,7 +54,9 @@ export class UserLoginComponent extends BaseUserForm implements OnInit {
                 .subscribe(
                 data => {
                     if(data.isSuccess) {
-                        this.router.navigate(['home']);
+                        var searchParams = new URLSearchParams(location.search.slice(1));
+                        console.log(searchParams.get("returnUrl"));
+                        this.router.navigate([searchParams.get("returnUrl")]);
                     }
                     else {
                         this.formErrors.formError = data.msg;

@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 
 @Component({
-    selector: 'home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    selector: 'blog-deleted',
+    templateUrl: './blog-deleted.component.html',
+    styleUrls: ['./blog-deleted.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class BlogDeletedComponent implements OnInit {
     constructor(public http:Http) {
         
     }
 
     ngOnInit() {
+            
     }
 }

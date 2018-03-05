@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Location } from '@angular/common';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
@@ -17,11 +18,11 @@ export class AuthGuard implements CanActivate {
 
 
 		let result = this.userAuthService.isLogin();
-
+		
 		result.subscribe(
 			data => {
 				if(!data) {
-					this.route.navigate(['user/login']);
+					this.route.navigate(['user/login'], { queryParams: { returnUrl: location.pathname}});
 				}
 			}
 		);

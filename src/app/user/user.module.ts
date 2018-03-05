@@ -10,7 +10,6 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 
 import { UserManageService } from './services/user-manage.service';
-import { AuthGuard } from './auth-guard';
 
 import { userRoutes } from './user.routes';
 
@@ -32,8 +31,7 @@ import { userRoutes } from './user.routes';
         UserManageComponent
     ],
     providers: [
-        UserManageService,
-        AuthGuard
+        UserManageService
     ]
 })
 export class UserModule { }

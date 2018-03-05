@@ -15,5 +15,9 @@ export const appRoutes = [
     {
         path: 'user',
         loadChildren: './user/user.module#UserModule'
+    },
+    {
+        path: 'blog',
+        loadChildren: './blog/blog.module#BlogModule'
     }
 ];

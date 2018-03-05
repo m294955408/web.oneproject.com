@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserAuthService } from './user/services/user-auth.service';
+import { AuthGuard } from './user/auth-guard';
 
 import {appRoutes} from './app.routes';
 
@@ -21,7 +22,8 @@ import {appRoutes} from './app.routes';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    UserAuthService
+    UserAuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
